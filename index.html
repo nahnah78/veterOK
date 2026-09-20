@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кофейня «Ветерок» — уютный кофе в центре города</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Кофейня</p>
+    <h1>Ветерок</h1>
+    <p class="hero-tagline">Самый уютный кофе в городе — свежая обжарка, домашние десерты и тёплая атмосфера каждый день.</p>
+    <a class="btn hero-btn" href="#menu">Смотреть меню</a>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="container">
+      <h2>О нас</h2>
+      <p class="section-lead">Кофейня «Ветерок» работает с 2015 года. Мы варим свежий кофе, печём десерты каждое утро и всегда рады гостям. Заходите на чашечку кофе в любое время с 8:00 до 21:00!</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="container">
+      <h2>Меню</h2>
+      <div id="menuFilters" role="group" aria-label="Фильтр меню">
+        <button class="filter-btn active" data-cat="all" type="button">Всё меню</button>
+        <button class="filter-btn" data-cat="drinks" type="button">Напитки</button>
+        <button class="filter-btn" data-cat="desserts" type="button">Десерты</button>
+      </div>
+      <ul id="menuList">
+        <li data-cat="drinks">
+          <span class="menu-item-name">Капучино</span>
+          <span class="menu-item-price">220 ₽</span>
+        </li>
+        <li data-cat="drinks">
+          <span class="menu-item-name">Латте</span>
+          <span class="menu-item-price">240 ₽</span>
+        </li>
+        <li data-cat="drinks">
+          <span class="menu-item-name">Американо</span>
+          <span class="menu-item-price">180 ₽</span>
+        </li>
+        <li data-cat="drinks">
+          <span class="menu-item-name">Раф-кофе</span>
+          <span class="menu-item-price">260 ₽</span>
+        </li>
+        <li data-cat="desserts">
+          <span class="menu-item-name">Чизкейк</span>
+          <span class="menu-item-price">320 ₽</span>
+        </li>
+        <li data-cat="desserts">
+          <span class="menu-item-name">Круассан</span>
+          <span class="menu-item-price">190 ₽</span>
+        </li>
+        <li data-cat="desserts">
+          <span class="menu-item-name">Тирамису</span>
+          <span class="menu-item-price">300 ₽</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="container">
+      <div class="booking-panel">
+        <h2>Забронировать столик</h2>
+        <p class="booking-note">Оставьте заявку — и мы всё подготовим к вашему приходу.</p>
+        <form id="bookingForm">
+          <div class="field">
+            <label for="bookName">Ваше имя</label>
+            <input type="text" id="bookName" name="bookName" placeholder="Как к вам обращаться" required>
+          </div>
+          <div class="field">
+            <label for="bookPhone">Телефон</label>
+            <input type="tel" id="bookPhone" name="bookPhone" placeholder="+7 (900) 123-45-67" required>
+          </div>
+          <div class="field">
+            <label for="bookGuests">Количество гостей</label>
+            <input type="number" id="bookGuests" name="bookGuests" min="1" max="12" value="2" required>
+          </div>
+          <button class="btn booking-btn" type="submit">Забронировать</button>
+        </form>
+        <p id="bookingResult" class="booking-result" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacts">
+  <div class="container">
+    <h2>Контакты</h2>
+    <p>г. Москва, ул. Тёплая, д. 5<br>
+    Телефон: +7 (900) 123-45-67<br>
+    Часы работы: 8:00 – 21:00 ежедневно</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
